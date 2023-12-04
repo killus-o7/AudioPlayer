@@ -18,7 +18,7 @@ class MainActivity : AppCompatActivity() {
             MusicItem("Miauczący kot", R.drawable.cat, R.raw.cat),
             MusicItem("Duża metalowa rura", R.drawable.metal_pipe, R.raw.metal_pipe)
         )
-        val music = MusicHandler(this)
+        val music = MusicHandler(applicationContext)
         b.recycler.apply {
             layoutManager = GridLayoutManager(context, 2)
             adapter = MusicAdapter(list) { id -> music.play(id) }

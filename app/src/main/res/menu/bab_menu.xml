@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <menu xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto">
-    <item android:id="@+id/back_arrow"
+    <item android:id="@+id/loop"
         android:icon="@drawable/ic_repeat_24"
         android:title="repeat"
         app:showAsAction="always" />
 
-    <item android:id="@+id/forward_arrow"
+    <item android:id="@+id/next"
         android:icon="@drawable/ic_arrow_forward_24"
         android:title="forward"
         app:showAsAction="always" />

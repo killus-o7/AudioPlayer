@@ -2,22 +2,25 @@ package com.example.audioplayer.music
 
 import android.content.Context
 import android.media.MediaPlayer
-import com.example.audioplayer.MainActivity
-import java.io.FileDescriptor
 
 class MusicHandler(private val context: Context) {
-    private var player: MediaPlayer = MediaPlayer()
+    private var mp: MediaPlayer = MediaPlayer()
     fun play(res: Int) {
         load(res)
-        player.start()
+        mp.start()
+    }
+
+    fun loop(): Boolean = mp.isLooping.also { mp.isLooping = !it }.run { mp.isLooping }
+    fun playNext() {
+        //mp.
     }
 
     private fun load(res: Int){
-        player.apply {
+        mp.apply {
             stop()
             reset()
             release()
         }
-        player = MediaPlayer.create(context, res)
+        mp = MediaPlayer.create(context, res)
     }
 }
